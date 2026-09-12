@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gazette-paper text-gazette-ink font-body antialiased;
+  background-image: radial-gradient(circle at 1px 1px, rgba(18,33,66,0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.tricolor-rule {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #e07a2c 0%,
+    #e07a2c 33%,
+    #f7f4ec 33%,
+    #f7f4ec 66%,
+    #1b6e63 66%,
+    #1b6e63 100%
+  );
+}
+
+.container-gazette {
+  @apply mx-auto w-full max-w-5xl px-6;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-sm px-5 py-2.5 font-body font-semibold text-sm transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gazette-navy disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply btn bg-gazette-navy text-gazette-paper hover:bg-gazette-navyLight;
+}
+
+.btn-accent {
+  @apply btn bg-gazette-saffron text-white hover:bg-gazette-saffronDark;
+}
+
+.btn-outline {
+  @apply btn border border-gazette-navy text-gazette-navy hover:bg-gazette-navy hover:text-gazette-paper;
+}
+
+.btn-ghost {
+  @apply btn text-gazette-navy hover:bg-gazette-navy/5;
+}
+
+.field-label {
+  @apply mb-1.5 block text-sm font-medium text-gazette-ink/80;
+}
+
+.field-input {
+  @apply w-full rounded-sm border border-gazette-line bg-white px-3.5 py-2.5 text-sm text-gazette-ink placeholder:text-gazette-ink/40 focus:outline-none focus:border-gazette-navy focus:ring-1 focus:ring-gazette-navy;
+}
+
+.panel {
+  @apply rounded-sm border border-gazette-line bg-white;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold tracking-wide text-gazette-saffronDark;
+}
